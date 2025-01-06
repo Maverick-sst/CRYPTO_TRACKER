@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track live prices and historical data of popular cryptocurrencies like Bitcoin, Ethereum, and Binance Coin.">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Crypto Tracker Dashboard</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left-panel">
+                <section class="live-price">
+                    <h2>Live Price</h2>
+                    <label for="crypto">Choose a cryptocurrency:</label>
+                    <select id="crypto" aria-label="Cryptocurrency Selector">
+                        <option value="bitcoin">Bitcoin</option>
+                        <option value="ethereum">Ethereum</option>
+                        <option value="binancecoin">Binance Coin</option>
+                    </select>
+                    <div id="price-display" aria-live="polite">--</div>
+                </section>
+                <section class="chart">
+                    <h2>Historical Data</h2>
+                    <canvas id="crypto-chart" aria-label="Cryptocurrency Historical Data Chart"></canvas>
+                </section>
+            </div>
+            <div class="right-panel">
+                <section class="prediction">
+                    <h2>Price Prediction</h2>
+                    <div id="prediction-display">Loading prediction...</div>
+                </section>
+                
+                <!-- New section for crypto image -->
+                <section class="crypto-image-container">
+                    <img id="crypto-img" src="" alt="Crypto Logo" />
+                </section>
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>

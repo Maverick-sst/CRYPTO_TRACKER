@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: #333;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    gap: 2rem; /* Increased gap between panels */
+}
+
+/* Left Panel */
+.left-panel {
+    flex: 2; /* Increase left panel size to give more space to the graph */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Increased gap for better spacing */
+}
+
+section {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Panel */
+.right-panel {
+    flex: 1;
+}
+
+#price-display,
+#prediction-display {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+canvas {
+    width: 100% !important;  /* Ensure the canvas takes up 100% of the container width */
+    height: 500px !important; /* Increase the height for better visibility */
+}
+
+/* Styling for the chart section */
+.chart {
+    position: relative;
+    height: 500px;  /* Adjust height of the chart section */
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Rotate x-axis labels and add padding */
+.chart canvas {
+    width: 100% !important;
+    height: 500px !important;
+}
+
+.chart canvas {
+    padding-bottom: 30px; /* Add space at the bottom to prevent labels from getting cut off */
+}
+
+/* Optional: Adjust the tick display on the x-axis */
+.chartjs-legend {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* New section for crypto image display */
+.crypto-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem; /* Add space above the image */
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-image-container img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    border-radius: 8px; /* Optional: add rounded corners for the image */
+}
+
